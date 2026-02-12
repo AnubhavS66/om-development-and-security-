@@ -1,114 +1,140 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suryarekha School</title>
+    <title>Suryarekha School | Amethi</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
-        
-        body { background-color: #f0f2f5; color: #333; line-height: 1.6; }
+        body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
 
-        /* Header Styling */
+        /* Header Section */
         header {
-            background: linear-gradient(135deg, #ff8c00, #ffae42);
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1577891913216-3d969674c307?auto=format&fit=crop&q=80&w=1000'); /* Placeholder image */
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 40px 20px;
+            padding: 80px 20px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-        header h1 { font-size: 2.5rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
-        header p { font-style: italic; font-weight: 300; opacity: 0.9; }
+        header h1 { font-size: 3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        header p { font-size: 1.2rem; margin-top: 10px; color: #ffd700; font-weight: bold; }
 
-        /* Main Container */
-        .container { max-width: 900px; margin: -30px auto 40px; padding: 20px; }
+        .container { max-width: 1000px; margin: -50px auto 40px; padding: 0 20px; }
 
-        /* Card Styling */
         .card {
             background: white;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
         }
 
-        h2 { color: #ff8c00; margin-bottom: 15px; border-bottom: 2px solid #fff3e0; display: inline-block; padding-bottom: 5px; }
+        h2 { color: #e67e22; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
 
-        .address { font-size: 1.1rem; color: #555; margin-bottom: 20px; }
+        /* Stats Section */
+        .stats { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 15px; }
+        .stat-card { background: #fff8f0; padding: 20px; border-radius: 10px; flex: 1; min-width: 250px; text-align: center; border: 1px solid #ffe0b2; }
+        .stat-card h3 { font-size: 2rem; color: #d35400; }
 
-        /* Facilities Grid */
-        .facilities-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+        /* Admin Section */
+        .admin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+        .admin-box { background: #2c3e50; color: white; padding: 20px; border-radius: 12px; text-align: center; }
+        .admin-box h4 { color: #ffae42; margin-bottom: 5px; }
+
+        /* Contact Section */
+        .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .contact-item { padding: 15px; border-radius: 10px; background: #f9f9f9; }
+        .call-btn {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
             margin-top: 15px;
+            font-weight: bold;
+            transition: 0.3s;
         }
+        .call-btn:hover { background: #219150; transform: scale(1.05); }
 
-        .facility-item {
-            background: #fff9f0;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #ff8c00;
-            font-weight: 600;
-            color: #444;
-            transition: transform 0.2s;
-        }
+        footer { text-align: center; padding: 40px; color: #888; border-top: 1px solid #ddd; }
 
-        .facility-item:hover { transform: translateY(-3px); background: #ffefd5; }
-
-        .special-note {
-            background: #e3f2fd;
-            border-left: 4px solid #2196f3;
-            padding: 10px;
-            margin-top: 10px;
-            font-size: 0.9rem;
-        }
-
-        /* Footer */
-        footer { text-align: center; color: #888; padding: 20px; font-size: 0.8rem; }
-
-        /* Mobile adjustments */
         @media (max-width: 600px) {
-            header h1 { font-size: 1.8rem; }
-            .container { margin-top: 10px; }
+            .admin-grid { grid-template-columns: 1fr; }
+            header h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Suryarekha School</h1>
-        <p>"Better Education and Better Life"</p>
+        <h1>SURYAREKHA SCHOOL</h1>
+        <p>BETTER EDUCATION AND BETTER LIFE</p>
     </header>
 
     <div class="container">
+        
         <div class="card">
-            <h2>About Us</h2>
-            <p class="address">
-                Surya Rekha School is a <strong>Hindi Medium</strong> school affiliated with <strong>UP Board</strong>.<br>
-                <small>📍 Pure Nihal Singh, Pakorgaon, Tiloi, Amethi, UP - 229309</small>
-            </p>
+            <h2>About Our School</h2>
+            <p>Suryarekha School is a Hindi Medium institution affiliated with the <strong>UP Board</strong>. We focus on providing holistic education to prepare students for a successful future.</p>
         </div>
 
         <div class="card">
-            <h2>Our Facilities</h2>
-            <div class="facilities-grid">
-                <div class="facility-item">📚 Extra Classes</div>
-                <div class="facility-item">💧 Clean Water</div>
-                <div class="facility-item">🏫 Clean Classrooms</div>
-                <div class="facility-item">🚌 Transport Facility</div>
-                <div class="facility-item">⚽ Play Ground</div>
-                <div class="facility-item">🎓 11th & 12th by IITians</div>
-            </div>
-            <div class="special-note">
-                * Our senior secondary classes (11th & 12th) are mentored by experts from IITs.
+            <h2>Board Achievements 🏆</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>90%+</h3>
+                    <p>Board Result 2023</p>
+                </div>
+                <div class="stat-card">
+                    <h3>90%+</h3>
+                    <p>Board Result 2024</p>
+                </div>
+                <div class="stat-card" style="background: #e8f5e9; border-color: #c8e6c9;">
+                    <h3 style="color: #2e7d32;">99%</h3>
+                    <p>Board Result 2025</p>
+                </div>
             </div>
         </div>
+
+        <div class="card">
+            <h2>School Leadership</h2>
+            <div class="admin-grid">
+                <div class="admin-box">
+                    <h4>Akhilesh Singh</h4>
+                    <p>Principal</p>
+                </div>
+                <div class="admin-box">
+                    <h4>Gaurav Tiwari</h4>
+                    <p>Manager</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Contact Us 📞</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>📍 Address:</strong><br>
+                    Village - Pure Nihal Singh, Pakorgaon,<br>
+                    Tiloi, Amethi, UP - 229309
+                </div>
+                <div class="contact-item">
+                    <strong>📧 Email & Phone:</strong><br>
+                    Email: info@suryarekhaschool.com<br>
+                    Phone: +91  8400432309
+                    <br>
+                    <a href="tel:+919795389460" class="call-btn">📞 Call Now</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <footer>
-        &copy; 2026 Suryarekha School | Built with ❤️ for Education
+        <p>&copy; 2026 Suryarekha School. All Rights Reserved.</p>
+        <p style="font-size: 12px; margin-top: 5px;">Affiliated with UP Board</p>
     </footer>
 
 </body>
