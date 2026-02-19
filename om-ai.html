@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OM Development and Security Team</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#0a0f1f,#203a43);
+color:white;
+}
+
+/* Header */
+header{
+background:black;
+padding:25px;
+text-align:center;
+font-size:30px;
+font-weight:bold;
+color:#00ffcc;
+box-shadow:0 0 20px #00ffcc;
+}
+
+/* Intro */
+.intro{
+text-align:center;
+padding:30px;
+color:#ccc;
+}
+
+/* Services */
+.container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+padding:20px;
+}
+
+.box{
+background:#111;
+padding:20px;
+width:300px;
+border-radius:15px;
+box-shadow:0 0 15px #00ffcc;
+}
+
+.box i{
+font-size:40px;
+color:#00ffcc;
+}
+
+/* Images */
+.images{
+text-align:center;
+}
+
+.images img{
+width:300px;
+margin:10px;
+border-radius:10px;
+}
+
+/* Contact buttons */
+.contact{
+text-align:center;
+padding:30px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 20px;
+margin:10px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+font-size:18px;
+}
+
+.whatsapp{
+background:#25D366;
+}
+
+.email{
+background:#0072ff;
+}
+
+/* Contact card */
+.contact-card{
+background:black;
+padding:20px;
+margin:20px;
+border-radius:15px;
+box-shadow:0 0 15px #00ffcc;
+text-align:center;
+}
+
+/* AI button */
+.ai-button{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#00ffcc;
+color:black;
+padding:15px;
+border-radius:50%;
+font-size:24px;
+cursor:pointer;
+}
+
+/* AI box */
+.ai-box{
+display:none;
+position:fixed;
+bottom:80px;
+right:20px;
+width:300px;
+background:black;
+border-radius:10px;
+box-shadow:0 0 20px #00ffcc;
+}
+
+.ai-header{
+background:#00ffcc;
+color:black;
+padding:10px;
+font-weight:bold;
+}
+
+.ai-chat{
+height:200px;
+overflow:auto;
+padding:10px;
+background:#111;
+}
+
+.ai-input{
+width:100%;
+padding:10px;
+border:none;
+}
+
+.ai-send{
+width:100%;
+padding:10px;
+background:#00ffcc;
+border:none;
+cursor:pointer;
+}
+
+footer{
+background:black;
+padding:15px;
+text-align:center;
+color:#aaa;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+WELCOME TO OM DEVELOPMENT AND SECURITY TEAM
+</header>
+
+<div class="intro">
+
+OM Development and Security Team provides professional Website Development,
+Game Development and Bug Bounty services.
+
+</div>
+
+<div class="container">
+
+<div class="box">
+
+<i class="fas fa-globe"></i>
+
+<h2>Website Development</h2>
+
+<p>
+We create fast, professional and mobile friendly websites.
+</p>
+
+</div>
+
+<div class="box">
+
+<i class="fas fa-gamepad"></i>
+
+<h2>Game Development</h2>
+
+<p>
+We develop modern mobile and web games.
+</p>
+
+</div>
+
+<div class="box">
+
+<i class="fas fa-bug"></i>
+
+<h2>Bug Bounty</h2>
+
+<p>
+We find and report bugs in systems.
+</p>
+
+</div>
+
+</div>
+
+<div class="images">
+
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420">
+
+<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
+
+</div>
+
+<div class="contact">
+
+<h2>Contact Us</h2>
+
+<a href="https://wa.me/919616457920" class="btn whatsapp">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
+<a href="mailto:thekinggaming882@gmail.com" class="btn email">
+<i class="fas fa-envelope"></i> Email
+</a>
+
+</div>
+
+<div class="contact-card">
+
+<h2>OM Development and Security Team</h2>
+
+<p>Phone: 9616457920</p>
+
+<p>Email: thekinggaming882@gmail.com</p>
+
+</div>
+
+<!-- AI -->
+<div class="ai-button" onclick="toggleAI()">🤖</div>
+
+<div class="ai-box" id="aiBox">
+
+<div class="ai-header">
+OM AI Assistant
+</div>
+
+<div class="ai-chat" id="chat">
+Hello 👋 Welcome to OM Development and Security Team
+</div>
+
+<input class="ai-input" id="input" placeholder="Type message">
+
+<button class="ai-send" onclick="send()">Send</button>
+
+</div>
+
+<footer>
+© 2026 OM Development and Security Team
+</footer>
+
+<script>
+
+/* Voice */
+window.onload=function(){
+
+let msg=new SpeechSynthesisUtterance(
+"Welcome to OM Development and Security Team"
+);
+
+speechSynthesis.speak(msg);
+
+}
+
+/* AI toggle */
+function toggleAI(){
+
+let box=document.getElementById("aiBox");
+
+box.style.display=
+box.style.display=="block"?"none":"block";
+
+}
+
+/* AI send */
+function send(){
+
+let input=document.getElementById("input");
+let chat=document.getElementById("chat");
+
+let msg=input.value;
+
+if(msg=="") return;
+
+chat.innerHTML+="<br><b>You:</b> "+msg;
+
+let reply=replyAI(msg);
+
+setTimeout(()=>{
+chat.innerHTML+="<br><b>AI:</b> "+reply;
+},500);
+
+input.value="";
+
+}
+
+/* AI brain */
+function replyAI(msg){
+
+msg=msg.toLowerCase();
+
+if(msg.includes("hello"))
+return "Hello! How can we help you?";
+
+if(msg.includes("website"))
+return "We build professional websites.";
+
+if(msg.includes("game"))
+return "We develop modern games.";
+
+if(msg.includes("bug"))
+return "We provide bug bounty service.";
+
+if(msg.includes("contact"))
+return "Contact on WhatsApp: 9616457920";
+
+return "Please contact on WhatsApp or Email.";
+
+}
+
+</script>
+
+</body>
+  </html>
+  
